@@ -1,0 +1,40 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "tap",
+    "eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\"",
+    "lint": "npm run eslint",
+    "lintfix": "npm run eslint -- --fix",
+    "postlint": "template-oss-check",
+    "template-oss-apply": "template-oss-apply --force",
+    "snap": "tap",
+    "posttest": "npm run lint"
+  },
+  "keywords": [],
+  "author": "GitHub Inc.",
+  "license": "ISC",
+  "packageManager": "pnpm@10.33.0",
+  "dependencies": {
+    "@prisma/client": "^5.22.0",
+    "bcrypt": "^6.0.0",
+    "jsonwebtoken": "^9.0.3",
+    "prisma": "^5.22.0"
+  },
+  "files": [
+    "bin/",
+    "lib/"
+  ],
+  "templateOSS": {
+    "//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten.",
+    "version": "4.29.0"
+  },
+  "tap": {
+    "nyc-arg": [
+      "--exclude",
+      "tap-snapshots/**"
+    ]
+  }
+}
