@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node serveur.js",
+    "build": "npx prisma generate",
     "test": "tap",
     "eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\"",
     "lint": "npm run eslint",
