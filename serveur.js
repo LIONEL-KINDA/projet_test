@@ -12,7 +12,7 @@ dotenv.config();
 
 const app = express();
 const prisma = new PrismaClient();
-const port = 3002;
+const port = process.env.PORT || 3002;
 
 // ✅ MIDDLEWARES EN PREMIER
 app.use(cors());
