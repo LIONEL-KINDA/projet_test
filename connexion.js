@@ -6,7 +6,7 @@ import { PrismaClient } from "@prisma/client";
 const router = express.Router();
 const prisma = new PrismaClient();
 
-const jwt_secret = process.env.secretKey;
+const jwt_secret = process.env.secretKey || "cle_secours_lionel_123";
 
 router.post("/connexion", async (req, res) => {
   try {
